@@ -1,0 +1,41 @@
+//Kahoot hack(no answers random)
+//paste the script in console, bookmark, etc. make sure to run it BEFORE you put in the game id.(it says hack started and prompts you once game id is put in)
+
+//put in game id.
+
+//when it asks you for letters and nums, you will see on the teachers screen that there is a url in the top address bar. //That url looks something like this: https://play.kahoot.it/v2/gameblock?quizId=somelettersandnumbers
+
+//the part where it says ?quizId=, copy somelettersandnumbers into the alert box that appears.
+//it should open a new window with some code looking stuff in it, copy all of it(ctrl+a) into the enter kahoot code box
+
+//this script wont work at all if the answers are random(could still get answers, but couldn't auto replace with correct answers)
+
+//check console for more detailed information(such as question answer.)
+//you can also turn on and off autocorrectanswer(if it is on, then it will change whatever answer you click to correct.)
+//READ INSTRUCTIONS FIRST(starts at top)
+//copy start
+javascript:var nativeWebSocket=window.WebSocket;let sock,msgs=[],autocorrectanswer=!0;async function getK(){let e=prompt("Enter letters/nums behind ?quizId= on teacher screen here(must be exact): ");var t=await fetch("https://blooket.schoolcheats.net/api/proxy/play.kahoot.it/rest/kahoots/"+e);if(200!=t.status)return alert("Hack failed!"),void window.location.reload();window.k=await t.json(),alert("Hack Started!")}getK().then((e=>{window.WebSocket=function(...e){const n=new nativeWebSocket(...e);return sock=n,n.addEventListener("message",(function(e){var n=JSON.parse(e.data)[0];"/service/player"===n.channel&&function(e){msgs.push(e);var n=JSON.parse(e.content);switch(e.id){case 1:console.log("Question recieved!"),window.qid=n.questionIndex,k&&(window.correct=k.questions[n.questionIndex].choices.findIndex((e=>e.correct)),window.color=t[correct],console.log(color),console.log("Correct answer: "+k.questions[n.questionIndex].choices[correct].answer));break;case 2:console.log("Question Started!")}}(n.data)})),n.sendws=n.send,n.send=function(e){"/service/controller"===JSON.parse(e)[0].channel?(autocorrectanswer&&(e=function(e){var t=JSON.parse(e)[0];if(45===t.data.id){var n=JSON.parse(t.data.content);return n.choice=correct,t.data.content=JSON.stringify(n),JSON.stringify([t])}return e}(e)),this.sendws(e)):this.sendws(e)},alert("Connecting to game..."),n};var t=["red","blue","yellow","green"]}));
+//copy end
+//copy start
+javascript:var nativeWebSocket = window.WebSocket;
+let sock;
+let msgs = [];
+let autocorrectanswer = true;
+async function getK(){
+let p = prompt("Enter letters/nums behind ?quizId= on teacher screen here(must be exact): ");
+var tk = await fetch("https://blooket.schoolcheats.net/api/proxy/play.kahoot.it/rest/kahoots/"+p);
+if(tk.status!=200){alert("Hack failed!");window.location.reload();return;}window.k=await tk.json();alert("Hack Started!");
+}
+getK().then(a=>{
+window.WebSocket = function(...args){
+  const socket = new nativeWebSocket(...args);
+sock=socket;
+  socket.addEventListener("message",function(e){var d = JSON.parse(e.data)[0];if(d.channel==="/service/player"){parse(d.data);}});
+  socket.sendws = socket.send;
+  socket.send=function(d){if(JSON.parse(d)[0].channel==="/service/controller"){if(autocorrectanswer){d=cli(d);}this.sendws(d);}else{this.sendws(d);}}
+  alert("Connecting to game...");
+  return socket;
+};
+function cli(m){var msg=JSON.parse(m)[0];if(msg.data.id===45){var c = JSON.parse(msg.data.content);c.choice=correct;msg.data.content=JSON.stringify(c);return JSON.stringify([msg]);}else{return m;}}
+function parse(d){msgs.push(d);var c = JSON.parse(d.content);switch(d.id){case 1:console.log("Question recieved!");window.qid=c.questionIndex;if(k){window.correct = k.questions[c.questionIndex].choices.findIndex(e=>e.correct);window.color=colors[correct];console.log(color);console.log("Correct answer: " + k.questions[c.questionIndex].choices[correct].answer);}break;case 2:console.log("Question Started!");break;}}var colors = ["red","blue","yellow","green"];});
+//copy end
