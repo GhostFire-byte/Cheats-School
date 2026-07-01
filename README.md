@@ -39,3 +39,5 @@ Here is the instructions they gave for their kahoot bot:
 //check console for more detailed information(such as question answer.)
 //you can also turn on and off autocorrectanswer**(if it is on, then it will change whatever answer you click to correct.)**
 
+Also, I think that most, if not all kahoot bots that grabs answers need quizID, so find a way to trick your teachers into sending it :P
+im trying to find one that doesn't need quizID but...
