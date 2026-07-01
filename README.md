@@ -7,6 +7,10 @@ For Kahoot, please get the quizid before joining, and run the extension before i
 Quizid is usually the last string of gibberish behind the url on your teacher/host screen.
 
 Also, thanks to the different people that I got the script from, go check out their websites and posts.
+Their scripts are posted as well, you can just copy everything (Ctrl+a) then open chrome console and paste.
+If you don't know where chrome console is, WHY ARE YOU EVEN HERE????
+Basically, just right click the page, then click inspect, then switch to console.
+if it shows a yellowish error, type in 'allow pasting', then paste again.
 
 For those who do not know how to load a extension, follow these steps;
 1. Go to your browser, go to the extensions page.
