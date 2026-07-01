@@ -17,3 +17,7 @@ For those who do not know how to load a extension, follow these steps;
 5. You are done!!
 
 btw you can pin it for efficiency
+
+Also you can find the scripts being ran in the files labeled as Blooket.js, kahoot-1.js and kahoot-2.js
+
+Credits to zachary lee for the blooket cheats, his website: https://gitlab.com/zacharylee2/blooket-cheats/-/tree/c322469ebbd192b6731480af76b1ac0a3d4a7b22
