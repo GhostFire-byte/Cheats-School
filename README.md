@@ -21,3 +21,21 @@ btw you can pin it for efficiency
 Also you can find the scripts being ran in the files labeled as Blooket.js, kahoot-1.js and kahoot-2.js
 
 Credits to zachary lee for the blooket cheats, his website: https://gitlab.com/zacharylee2/blooket-cheats/-/tree/c322469ebbd192b6731480af76b1ac0a3d4a7b22
+Unfortunately, i am unable to find who made the kahoot hacks, so im sorry to the person who made this :(.
+Here is the instructions they gave for their kahoot bot:
+
+//Kahoot hack(no answers random)
+//paste the script in console, bookmark, etc. make sure to run it BEFORE you put in the game id.(it says hack started and prompts you once game id is put in)
+
+//put in game id.
+
+//when it asks you for letters and nums, you will see on the teachers screen that there is a url in the top address bar. //That url looks something like this: https://play.kahoot.it/v2/gameblock?quizId=somelettersandnumbers
+
+//the part where it says ?quizId=, copy somelettersandnumbers into the alert box that appears.
+//it should open a new window with some code looking stuff in it, copy all of it(ctrl+a) into the enter kahoot code box
+
+//this script wont work at all if the answers are random(could still get answers, but couldn't auto replace with correct answers)
+
+//check console for more detailed information(such as question answer.)
+//you can also turn on and off autocorrectanswer**(if it is on, then it will change whatever answer you click to correct.)**
+
